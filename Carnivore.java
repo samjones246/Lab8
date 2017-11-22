@@ -3,6 +3,9 @@ public abstract class Carnivore extends Animal {
     public Carnivore(String name, int age) {
         super(name, age);
     }
+    public Carnivore(){
+        super();
+    }
 
     // Throws an exception if the food passed into this method is a Plant
     @Override

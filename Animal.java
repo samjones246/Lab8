@@ -1,4 +1,4 @@
-public abstract class Animal {
+public abstract class Animal implements Comparable<Animal>{
 
     String name;
     int age;
@@ -6,6 +6,9 @@ public abstract class Animal {
     public Animal(String name, int age){
         this.name = name;
         this.age = age;
+    }
+    public Animal(){
+        this("newborn", 0);
     }
 
     // Getter methods
@@ -20,4 +23,8 @@ public abstract class Animal {
     public abstract void makeNoise();
     public abstract void eat(Food food) throws Exception;
     public abstract void eat(Food food, int times) throws Exception;
+    @Override
+    public int compareTo(Animal animal){
+        return age-animal.age;
+    }
 }

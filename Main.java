@@ -20,5 +20,9 @@ public class Main {
         }catch (Exception e){
             System.err.println(e);
         }
+        System.out.println("Creating wolf with default constructor...");
+        Wolf newBornWolf = new Wolf();
+        System.out.println("Name: " + newBornWolf.getName());
+        System.out.println("Age: " + newBornWolf.getAge());
     }
 }
